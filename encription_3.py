@@ -17,3 +17,7 @@ cookie = b'user-alice'
 sig = sign(cookie)
 
 print("{0},{1}".format(cookie.decode('utf-8'), sig))
+
+print(verify(cookie, sig))
+
+print(verify(b'user-bob', sig))
